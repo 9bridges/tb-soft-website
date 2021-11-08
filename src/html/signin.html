@@ -1,64 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    {{> partials/head title="Landkit"}}
-  </head>
-  <body>
+    <head>
+        {{> partials/head title="九桥同步"}}
+    </head>
+    <body>
+        <!-- CONTENT -->
+        <section class="section-border border-primary">
+            <div class="container d-flex flex-column">
+                <div
+                    class="
+                        row
+                        align-items-center
+                        justify-content-center
+                        gx-0
+                        min-vh-100
+                    "
+                >
+                    <div class="col-12 col-md-5 col-lg-4 py-8 py-md-11">
+                        <!-- Heading -->
+                        <h1 class="mb-0 fw-bold text-center">Sign in</h1>
 
-    <!-- CONTENT -->
-    <section class="section-border border-primary">
-      <div class="container d-flex flex-column">
-        <div class="row align-items-center justify-content-center gx-0 min-vh-100">
-          <div class="col-12 col-md-5 col-lg-4 py-8 py-md-11">
+                        <!-- Text -->
+                        <p class="mb-6 text-center text-muted">
+                            Simplify your workflow in minutes.
+                        </p>
 
-            <!-- Heading -->
-            <h1 class="mb-0 fw-bold text-center">
-              Sign in
-            </h1>
+                        <!-- Form -->
+                        <form class="mb-6">
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label class="form-label" for="email">
+                                    Email Address
+                                </label>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    placeholder="name@address.com"
+                                />
+                            </div>
 
-            <!-- Text -->
-            <p class="mb-6 text-center text-muted">
-              Simplify your workflow in minutes.
-            </p>
+                            <!-- Password -->
+                            <div class="form-group mb-5">
+                                <label class="form-label" for="password">
+                                    Password
+                                </label>
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="password"
+                                    placeholder="Enter your password"
+                                />
+                            </div>
 
-            <!-- Form -->
-            <form class="mb-6">
+                            <!-- Submit -->
+                            <button class="btn w-100 btn-primary" type="submit">
+                                Sign in
+                            </button>
+                        </form>
 
-              <!-- Email -->
-              <div class="form-group">
-                <label class="form-label" for="email">
-                  Email Address
-                </label>
-                <input type="email" class="form-control" id="email" placeholder="name@address.com">
-              </div>
+                        <!-- Text -->
+                        <p class="mb-0 fs-sm text-center text-muted">
+                            Don't have an account yet
+                            <a href="signup.html">Sign up</a>.
+                        </p>
+                    </div>
+                </div>
+                <!-- / .row -->
+            </div>
+            <!-- / .container -->
+        </section>
 
-              <!-- Password -->
-              <div class="form-group mb-5">
-                <label class="form-label" for="password">
-                  Password
-                </label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your password">
-              </div>
-
-              <!-- Submit -->
-              <button class="btn w-100 btn-primary" type="submit">
-                Sign in
-              </button>
-
-            </form>
-
-            <!-- Text -->
-            <p class="mb-0 fs-sm text-center text-muted">
-              Don't have an account yet <a href="signup.html">Sign up</a>.
-            </p>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- JAVASCRIPT -->
-    {{> partials/scripts}}
-
-  </body>
+        <!-- JAVASCRIPT -->
+        {{> partials/scripts}}
+    </body>
 </html>

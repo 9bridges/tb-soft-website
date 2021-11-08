@@ -1,6 +1,6 @@
 # LANDKIT
 
-Landkit Theme by Good Themes.
+九桥同步 Theme by Good Themes.
 
 ### Documentation
 
@@ -10,12 +10,12 @@ Development documentation is available at `src/html/docs/index.html` (or `dist/d
 
 The steps to compile and get started with development are covered in detail in documentation mentioned above, but the summary is:
 
-- npm install
-- npm start
+-   npm install
+-   npm start
 
 ### Design Files
 
-We provide an "unofficial" Landkit Figma file for you to play with. Learn more about it at https://www.figma.com/file/e6SElg0s79XUTzHfvJkbhV/LandKit-2.0.0-beta-Distsributed?node-id=2016%3A15971.
+We provide an "unofficial" 九桥同步 Figma file for you to play with. Learn more about it at https://www.figma.com/file/e6SElg0s79XUTzHfvJkbhV/LandKit-2.0.0-beta-Distsributed?node-id=2016%3A15971.
 
 ### Support
 
