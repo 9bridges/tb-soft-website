@@ -8,25 +8,30 @@
 // Spans the whole with of the viewport
 
 .img-cover {
-  width: 100vw;
-  height: auto;
-  margin-left: calc(50% - 50vw);
+    width: 100vw;
+    height: auto;
+    margin-left: calc(50% - 50vw);
 }
 
 // Extending .img-fluid class to support nested images
 
 .img-fluid > img,
 .img-fluid > svg {
-  max-width: inherit;
-  height: inherit;
+    max-width: inherit;
+    height: inherit;
+}
+
+.img-footer {
+    max-height: 50px;
+    width: auto;
 }
 
 // Figure
 
 .figure {
-  display: block;
+    display: block;
 }
 
 .figure-img {
-  margin-bottom: $spacer;
+    margin-bottom: $spacer;
 }
