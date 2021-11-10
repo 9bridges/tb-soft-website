@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {{> partials/head title="数据集成 | 九桥同步"}}
+        {{> partials/head title="数据复制 | 九桥同步"}}
     </head>
     <body class="bg-light">
         <!-- MODALS -->
@@ -17,7 +17,7 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-md">
                         <!-- Heading -->
-                        <h1 class="display-4 mb-0">数据集成</h1>
+                        <h1 class="display-4 mb-0">数据复制</h1>
                     </div>
                 </div>
                 <!-- / .row -->
@@ -30,24 +30,45 @@
                 <!-- / .row -->
                 <div class="row">
                     <div class="col-12 col-md-8">
-                        <!-- Text -->
-                        <p class="fs-lg text-gray-800 mb-6 mb-md-8">
-                            近年来，随着信息技术，特别是网络技术的飞速发展，信息化已经成为政府及各大企事业普遍关注的焦点。随着企业业务范围的不断扩大以及竞争的加剧，越来越多的企业开始在全国甚至全球范围内建立分支机构，总部与分支机构之间协同工作的需求越来越高。同时，随着业务持续扩展和应用日益复杂，组织的IT基础框架越来越朝着集中管理的方向发展。将业务数据存储、应用服务以及业务管理放在数据中心完成的部署方式给企业带来各方面的优势。
-                        </p>
-
                         <!-- Heading -->
-                        <h3 class="mb-5">我们的方案</h3>
+                        <h3 class="mb-5">产品介绍</h3>
 
                         <!-- Text -->
                         <p class="text-gray-800">
-                            很多企业因为业务的发展需要,建设了越来越多的信息系统,多的达到几十个,使得企业的信息不仅分散且利用率相对低下.数据本身可以为企业带来有很大的价值信息，但分散、不易于访问和管理的数据的价值却是非常有限的，在这一背景下应运而生的数据集中需求显得日渐强烈。数据集中可准确和及时地提供有用的信息，为企业的决策服务。<br /><br />
-                            初期的信息系统建设，由于业务模型的不成熟，软硬件环境的处理能力不足，跨区域流动需求的不明显，因此传统的业务系统都是按照地市级或者是分支结构进行的，便于及时为本级机构服务。因此对于一个政府部门或者大企业来说，每个分支机构都有若干套独立的，分散的，各自为政的系统。<br /><br />
-                            为了满足不断变化的业务需求及统一管理的要求，满足业务监管和统计分析的需要，都要求采取一定的手段将分散的数据集中到一起。<
+                            数据库复制软件V1.0（简称FZS）是新一代数据库逻辑复制软件，在下文都以FZS简称。<br />
+                        </p>
+                        <p class="text-gray-800">
+                            FZS是一种基于 Oracle
+                            在线日志（Redolog）分析技术的结构化数据实施复制备份软件产品，备份数据库始终处于OPEN状态。FZS通过在源端（生产）数据库服务器和目标端（备份端）数据库服务器各自配置一个代理程
+                            Source Agent 和 Target Agent，FZS
+                            Agent程序是绿色免安装的程序，直接解压配置启动参数就可以进行数据实时同步。<br />
+                        </p>
+                        <p class="text-gray-800">
+                            FZS利用数据库日志在线跟踪、分析技术，将生产数据库的交易信息以事务为单位，通过异步的方式，实时的传递、装载到目标数据库中，以达到源端、目标端复制数据保持同步的目的。<br />
+                        </p>
+                        <p class="text-gray-800">
+                            FZS通过在线分析Oracle Redo Log
+                            获得SQL语句和数据，完成DataBase级别schema
+                            级别或table级别的数据复制。区别于早期的以SQL语句为单位的日志处理、传输技术，FZS对日志的整合和传输以“事务”为单位，无需处理复杂的"回滚"机制。使用该技术，在拥有高性能的同时还能够更好的保证数据复制的一致性和完整性。<br />
+                        </p>
+                        <p class="text-gray-800">
+                            FZS无需等待Oracle Redo
+                            Log文件归档之后再进行处理，而是在线读取其数据块内容，抓取日志跟Oracle数据库写日志是并行操作而又不互相影响，而且不使用Oracle的任何资源。<br />
+                        </p>
+                        <p class="text-gray-800">
+                            FZS也不会传输Oracle redo
+                            log的全部内容到目的端，除指定复制对象（数据表）相关的DML/DDL操作之外，其他的信息不做处理，也就是说FZS以事务为单位来跟踪，分析在线日志，只处理已经COMMIT的交易，对于ROLLBACK操作，FZS不处理该操作，所以FZS只抓取约1/3日志变化量。<br />
+                        </p>
+                        <p class="text-gray-800">
+                            FZS读取日志的间隔时间可以用参数设定,以秒为单位。因此正常情况下,FZS都是准实时的抓取变化日志量。在每次抓取的日志量处理完成以后，记录在FZS的缓存目录中，因此对于日常运行过程中，FZS停止或其它原因需要读取归档日志时，根据记录的日志物理位置来定位需要抓取的归档日志。Rac环境中，在每一个实例所在的主机操作系统上可以读取另外主机的在线日志（包括归档日志）。通过每一个实例的日志和SCN来保证交易顺序的准确性。
+                        </p>
+                        <p class="text-gray-800">
+                            下图是FZS通过解析Oracle在线日志Redolog实现数据同步的原理图：
                         </p>
 
                         <img
                             class="figure-img img-fluid rounded lift lift-lg"
-                            src="../assets/img/content-images/data-integration.png"
+                            src="../assets/img/content-images/data-replication.png"
                             alt="..."
                         />
 
@@ -55,87 +76,61 @@
                         <h3 class="mt-5 mb-5">我们的优势</h3>
 
                         <!-- List -->
-                        <div class="d-flex">
-                            <!-- Badge -->
-                            <span
-                                class="
-                                    badge badge-rounded-circle
-                                    bg-success-soft
-                                    mt-1
-                                    me-4
-                                "
-                            >
-                                <i class="fe fe-check"></i>
-                            </span>
-
-                            <!-- Text -->
-                            <p class="text-gray-800">
-                                由于数据库复制软件是通过对生产库的 redolog
-                                进行实时跟踪分析，任何数据变化都会在秒级内上传到数据平台。
-                            </p>
-                        </div>
-                        <div class="d-flex">
-                            <!-- Badge -->
-                            <span
-                                class="
-                                    badge badge-rounded-circle
-                                    bg-success-soft
-                                    mt-1
-                                    me-4
-                                "
-                            >
-                                <i class="fe fe-check"></i>
-                            </span>
-
-                            <!-- Text -->
-                            <p class="text-gray-800">
-                                数据库复制软件是基于数据库底层开发的，是一个通用软件，只需要配置好同步哪些用户或是表的数据就可以了，所以当源库进行调整时，数据复制软件也不需要修改。
-                            </p>
-                        </div>
-                        <div class="d-flex">
-                            <!-- Badge -->
-                            <span
-                                class="
-                                    badge badge-rounded-circle
-                                    bg-success-soft
-                                    mt-1
-                                    me-4
-                                "
-                            >
-                                <i class="fe fe-check"></i>
-                            </span>
-
-                            <!-- Text -->
-                            <p class="text-gray-800">
-                                只需要安装软件，配置需要集中读取的用户和表名即可完成数据的实时集中。部署周期短。
-                            </p>
-                        </div>
-                        <div class="d-flex">
-                            <!-- Badge -->
-                            <span
-                                class="
-                                    badge badge-rounded-circle
-                                    bg-success-soft
-                                    mt-1
-                                    me-4
-                                "
-                            >
-                                <i class="fe fe-check"></i>
-                            </span>
-
-                            <!-- Text -->
-                            <p class="text-gray-800">
-                                数据库复制软件从数据库的在线日志中获取数据，无人能够对数据进行加工处理,因此非常安全可靠。
-                            </p>
-                        </div>
-
-                        <!-- Heading -->
-                        <h3 class="mt-5 mb-5">应用场景</h3>
-
-                        <!-- Text -->
-                        <p class="text-gray-800">
-                            政府行业：例如财政，公安，社保信息联网等都需要从各个市县级系统实时获取变化数据形成全省或是全国的联网库。
-                        </p>
+                        <ol class="text-gray-800">
+                            <li>
+                                <strong>在线部署简单、占用资源少</strong
+                                ><br /><br />
+                                FZS部署非常简单。所有软件安装配置都可以使用图形界面进行操作。对于Unix/Linux以及Oracle熟悉的技术人员参照相关文档，在10-30分钟即可部署完毕。在源端和目标端数据库上不创建任何表。FZS对于每一个同步的用户或表，只需4条指令完成，并且支持脚本操作，这样就可以避免多个用户复制时复杂的指令操作了。对于n个用户的复制，源端只需要n+3条指令即可完成复制操作。增量复制过程中，FZS对于主机CPU资源的占用平均不会超过5%。
+                                <br /><br />
+                            </li>
+                            <li>
+                                <strong>异构跨平台的支持</strong><br /><br />
+                                FZS是以数据库的交易为单位进行复制、装载，因此对于不同操作系统上的不同oracle平台环境，FZS均可以支持。对于源端和目的端操作系统，数据库版本不同的情况也可以支持，当然前提是不同oracle版本之间的schema使用方法要彼此支持。
+                                <br /><br />
+                            </li>
+                            <li>
+                                <strong>灵活的部署模式</strong><br /><br />
+                                FZS支持一个源端同时复制多个目的节点的复制模式，并支持多个源端到一个目标端的复制模式，真正在软件上实现了一对多或是多对一的复制模式。大大减少了源端主机资源的占有率。
+                                <br /><br />
+                            </li>
+                            <li>
+                                <strong>对部分表重新进行单独全同步</strong
+                                ><br /><br />
+                                在增量使用过程中，有可能会因为某种误操作导致目的端数据更改，当源端再次对相关部分的数据进行更改时，结果导致FZS将停止这张表的复制。对于这种情况，FZS的处理方式是对该表重新进行单独全同步，同时对于其它正在复制的表或shema不会有任何影响。这样就避免了因为某一张表的误操作而需要相关用户需要全同步的操作。
+                                <br /><br />
+                            </li>
+                            <li>
+                                <strong>定时复制</strong><br /><br />
+                                FZS支持指定时间装载复制数据到指定时刻交易的功能。不仅可以满足某些特殊的应用需求而且在某些方面起到了备份的作用。
+                                <br /><br />
+                            </li>
+                            <li>
+                                <strong>实时显示交易的统计</strong><br /><br />
+                                FZS在目的端运行日志中：<br />
+                                显示每一个合成交易文件的装载时间以及延迟时间。<br />
+                                显示每一个合成交易文件的dml数量，包括inert、update、delete数量上的统计。<br />
+                                显示每一个合成交易文件的ddl操作语句
+                                <br /><br />
+                            </li>
+                            <li>
+                                <strong>字符操作和客户端操作模式</strong
+                                ><br /><br />
+                                FZS提供了不仅提供了字符操作模式而且也提供的客户端监控界面，通过两种方式都可以对FZS进行日常维护和监控。满足了不同用户的使用习惯。两种操作模式，FZS均提供了后台服务进程，无须第三方软件或服务协助。
+                                <br /><br />
+                            </li>
+                            <li>
+                                <strong>静态数据校验</strong><br /><br />
+                                FZS提供了静态数据校验功能，来确认复制数据的准确性，使用此功能时，最好在业务相对较少时刻，否则统计将没有太大意义。
+                                <br /><br />
+                            </li>
+                            <li>
+                                <strong>支持 Oracle 自带数据导入工具</strong
+                                ><br /><br />
+                                FZS支持源端oracle自带的
+                                imp和sqlldr数据导入工具的使用。对于10G中的impdp工具，FZS也提供支持。这样就不会影响使用oracle技术人员的操作习惯。
+                                <br /><br />
+                            </li>
+                        </ol>
                     </div>
                     {{> partials/contact}}
                 </div>
