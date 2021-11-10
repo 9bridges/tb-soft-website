@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{> partials/head title="数据容灾 | 九桥同步"}}
+    </head>
+    <body class="bg-light">
+        <!-- MODALS -->
+        {{> partials/modals}}
+
+        <!-- NAVBAR -->
+        {{> partials/navbar classList="navbar-light bg-white border-bottom"
+        container="container-fluid" button="primary"}}
+
+        <!-- CONTENT -->
+        <section class="pt-8 pt-md-8 pb-8 pb-md-8">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md">
+                        <!-- Heading -->
+                        <h1 class="display-4 mb-0">数据容灾</h1>
+
+                        <!-- Text -->
+                        <!-- <p class="fs-lg text-gray-700 mb-md-0">
+                            Updated 3/15/2019
+                        </p> -->
+                    </div>
+                </div>
+                <!-- / .row -->
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Divider -->
+                        <hr class="my-6 my-md-8" />
+                    </div>
+                </div>
+                <!-- / .row -->
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <!-- Heading -->
+                        <h3 class="mb-5">我们的方案</h3>
+
+                        <!-- Text -->
+                        <p class="text-gray-800">
+                            自从震惊世界的“9.11”事件发生后，全世界都看到了金融、电信等行业用户在灾难中的巨大损失。因此，如何更加高效的保护我们IT系统的核心数据，提高企业应对灾难的能力，是每个IT企业在数据呈爆炸式增长的21世纪都必须进行考虑的重中之重。<br /><br />
+                            数据是企业的生命和灵魂，数据的破坏和不可恢复性，将导致整个容灾的失败。因此，数据容灾是整个容灾系统的基础和关键所在。<br /><br />
+                            对于大部分公司而言，容灾是一项巨大的工程，意味着高额的资金投入和人力成本。受到传统复制技术的限制，容灾必须拥有专用的硬件支持、专用的传输链路、容灾距离以及系统平台等诸多的限制。此外由于传统容灾系统的不能时时使用的特性，导致不但风险不能评估，而且巨大的投入也可能得不到任何回报。<br /><br />
+                            因此，拥有一种高效且低成本的数据库容灾系统是企业首先考虑的。
+                        </p>
+
+                        <img
+                            class="figure-img img-fluid rounded lift lift-lg"
+                            src="../assets/img/content-images/disaster-tolerance.png"
+                            alt="..."
+                        />
+
+                        <!-- Heading -->
+                        <h3 class="mt-5 mb-5">我们的优势</h3>
+
+                        <!-- List -->
+                        <div class="d-flex">
+                            <!-- Badge -->
+                            <span
+                                class="
+                                    badge badge-rounded-circle
+                                    bg-success-soft
+                                    mt-1
+                                    me-4
+                                "
+                            >
+                                <i class="fe fe-check"></i>
+                            </span>
+
+                            <!-- Text -->
+                            <p class="text-gray-800">
+                                由于数据库复制软件是通过对生产库的 redolog
+                                进行实时跟踪分析，任何数据变化都会在秒级内上传到数据平台。
+                            </p>
+                        </div>
+                        <div class="d-flex">
+                            <!-- Badge -->
+                            <span
+                                class="
+                                    badge badge-rounded-circle
+                                    bg-success-soft
+                                    mt-1
+                                    me-4
+                                "
+                            >
+                                <i class="fe fe-check"></i>
+                            </span>
+
+                            <!-- Text -->
+                            <p class="text-gray-800">
+                                数据库复制软件使用IP网络进行通讯，容灾端和生产端不会受到距离的限制。
+                            </p>
+                        </div>
+                        <div class="d-flex">
+                            <!-- Badge -->
+                            <span
+                                class="
+                                    badge badge-rounded-circle
+                                    bg-success-soft
+                                    mt-1
+                                    me-4
+                                "
+                            >
+                                <i class="fe fe-check"></i>
+                            </span>
+
+                            <!-- Text -->
+                            <p class="text-gray-800">
+                                当发生灾难时，数据不会丢失且容灾端和生产端可在数分钟内实现切换。
+                            </p>
+                        </div>
+                        <div class="d-flex">
+                            <!-- Badge -->
+                            <span
+                                class="
+                                    badge badge-rounded-circle
+                                    bg-success-soft
+                                    mt-1
+                                    me-4
+                                "
+                            >
+                                <i class="fe fe-check"></i>
+                            </span>
+
+                            <!-- Text -->
+                            <p class="text-gray-800">
+                                只需要安装软件，配置需要集中读取的用户和表名即可完成数据的实时集中。
+                                部署周期短。
+                            </p>
+                        </div>
+                        <div class="d-flex">
+                            <!-- Badge -->
+                            <span
+                                class="
+                                    badge badge-rounded-circle
+                                    bg-success-soft
+                                    mt-1
+                                    me-4
+                                "
+                            >
+                                <i class="fe fe-check"></i>
+                            </span>
+
+                            <!-- Text -->
+                            <p class="text-gray-800">
+                                数据库复制软件从数据库的在线日志中获取数据，无人能够对数据进行加工处理,因此非常安全可靠。
+                            </p>
+                        </div>
+                        <div class="d-flex">
+                            <!-- Badge -->
+                            <span
+                                class="
+                                    badge badge-rounded-circle
+                                    bg-success-soft
+                                    mt-1
+                                    me-4
+                                "
+                            >
+                                <i class="fe fe-check"></i>
+                            </span>
+
+                            <!-- Text -->
+                            <p class="text-gray-800">
+                                数据库复制软件是基于数据库底层开发的，是一个通用软件，只需要配置好同步哪些用户或是表的数据就可以了，所以当源库进行调整时，数据复制软件也不需要修改。
+                            </p>
+                        </div>
+                    </div>
+                    {{> partials/contact}}
+                </div>
+                <!-- / .row -->
+            </div>
+            <!-- / .container -->
+        </section>
+
+        <!-- SHAPE -->
+        <div class="position-relative">
+            <div class="shape shape-bottom shape-fluid-x text-dark">
+                {{> curves/curve-1}}
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        {{> partials/footer classList="bg-dark"}}
+
+        <!-- JAVASCRIPT -->
+        {{> partials/scripts}}
+    </body>
+</html>
