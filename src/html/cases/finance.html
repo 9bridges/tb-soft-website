@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{> partials/head title="金融行业 | 九桥同步"}}
+    </head>
+    <body class="bg-light">
+        <!-- MODALS -->
+        {{> partials/modals}}
+
+        <!-- NAVBAR -->
+        {{> partials/navbar classList="navbar-light bg-white border-bottom"
+        container="container-fluid" button="primary"}}
+
+        <!-- CONTENT -->
+        <section class="pt-8 pt-md-8 pb-8 pb-md-8">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md">
+                        <!-- Heading -->
+                        <h1 class="display-4 mb-0">金融行业</h1>
+                    </div>
+                </div>
+                <!-- / .row -->
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Divider -->
+                        <hr class="my-6 my-md-8" />
+                    </div>
+                </div>
+                <!-- / .row -->
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <p class="text-gray-800">
+                            软件成功应用到金融行业的所有应用系统中，如集中交易系统、QFII系统、CIF系统、CTP系统、网站
+                            ... ...
+                            软件在金融行业帮助客户轻松实现了两地三中心的数据容灾模式。
+                        </p>
+
+                        <img
+                            class="figure-img img-fluid rounded lift lift-lg"
+                            src="../assets/img/content-images/finance.png"
+                            alt="..."
+                        />
+                    </div>
+                    {{> partials/contact}}
+                </div>
+                <!-- / .row -->
+            </div>
+            <!-- / .container -->
+        </section>
+
+        <!-- SHAPE -->
+        <div class="position-relative">
+            <div class="shape shape-bottom shape-fluid-x text-dark">
+                {{> curves/curve-1}}
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        {{> partials/footer classList="bg-dark"}}
+
+        <!-- JAVASCRIPT -->
+        {{> partials/scripts}}
+    </body>
+</html>
